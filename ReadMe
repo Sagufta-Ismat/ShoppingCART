@@ -1,0 +1,20 @@
+Read Me: Shopping Cart
+
+"Add to Cart" Button:
+1. Click on the "Add to Cart" Button, without selecting the quantity: It will add 1 Item to the cart. 
+
+2.Click on the "Add to Cart" Button, selecting the quantity: It will add the quantity with Item details to the cart.
+
+3. If the Item is already present in the cart, and again you click on "Add to Cart" Button, the Cart will be updated. 
+
+
+
+"View Cart" button:
+1. Click on the view cart button: to View the Cart elements.
+
+
+"+" button In View Cart Div: 
+1. It will add increase 1 in quantity column, and will accordingly update the cart div and Total Price. (Assumption : There is no upper limit to it)
+
+"-" button In View Cart Div: 
+1. It will add decrease 1 in quantity column, and will accordingly update the cart div and Total Price. (Assumption : Delete the item, if quantity is 1 and the "-" button is clicked.)
