@@ -1,0 +1,233 @@
+$fontStack: Helvetica, sans-serif;
+$primaryColor: white;
+$highlightColor:yellow;
+$backgroundColor: blue;
+$alignContent: center;
+$margin: 0px;
+$padding: 0px;
+$displayNone: none;
+$backgroundImageForTables: url('../Images/Backgroung_tableIcon.jpg');
+
+body {
+    background-image: url('../Images/ShoppingCartBackgroung.jpg');
+}
+
+h1 {
+    align-content: $alignContent;
+}
+
+table {
+    font-family: Arial;
+    border: solid black thin;
+    width: 500px;
+    height: 200px;
+    border-radius: 20px;
+    border-spacing: 0px;
+    overflow: hidden;
+
+    tr {
+        border-top: solid black thin;
+        border-bottom: solid black thin;
+
+        th {
+            border-bottom: solid black thin;
+            align-content: $alignContent;
+        }
+
+        td {
+            text-align: "center";
+            border: solid black thin;
+            height: 50px;
+            border-radius: 20px;
+            font: bold 200px;
+
+            span {
+                font-family: Arial;
+                font: bold 200px;
+                align-content: $alignContent;
+            }
+        }
+    }
+}
+
+
+#container-Nav {
+    background-color: $backgroundColor;
+    position: relative;
+    color: $primaryColor;
+
+    ul {
+        @extend #container-Nav;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        /*color:$primary-color;*/
+        li {
+            display: inline-block;
+            color: $primaryColor;
+            border-radius: 20px;
+            background-color: $backgroundColor;
+            font-style: normal;
+            width: 150px;
+            border: 1px solid $primaryColor;
+            height: 50px;
+            /*line-height: 50px;*/
+            text-align: $alignContent;
+            float: left;
+            font-size: 20px;
+
+            a {
+                display: block;
+                padding: 6px 12px;
+                text-decoration: none;
+
+                span {
+                    color: $primaryColor;
+                }
+            }
+
+            ul li:hover {
+                background-color: $backgroundColor;
+                color: $highlightColor;
+                display:inline;
+            }
+
+            ul li:hover > #divShowProductDetails {
+                position: absolute;
+                top: 100px;
+            }
+        }
+
+        li:hover {
+            color: $highlightColor;
+        }
+
+        ul {
+            display: $displayNone;
+        }
+
+        .arrow_Up {
+            display: inline-block;
+        }
+
+        .arrow_Down {
+            display: $displayNone;
+        }
+
+        li:hover > .arrow_Up {
+            display: $displayNone;
+        }
+
+        li:hover > .arrow_Down {
+            display: inline-block;
+            color: $primaryColor;
+        }
+
+        li:hover > ul {
+            display: inline;
+        }
+    }
+}
+
+#divShowProductDetails {
+    top: 20px;
+    float: left;
+    background-image: $backgroundImageForTables;
+}
+
+#divEmptyShowProductDetails {
+    top: 10px;
+    left: 40%;
+    float: left;
+    height: 200px;
+    width: 400px;
+    background-image: $backgroundImageForTables;
+    position: relative;
+}
+
+#divContactDetails {
+    top: 10px;
+    left: 40%;
+    float: left;
+    height: 200px;
+    width: 400px;
+    position: relative;
+}
+
+#divTopNav {
+    float: right;
+    width: 1000px;
+    height: 50px;
+    /*resize:none;*/
+}
+
+#divViewCart {
+    top: 20px;
+    float: left;
+    background-image: $backgroundImageForTables;
+}
+
+#btnlogIn {
+    background-color: yellow;
+}
+
+#divLogIn {
+    width: 500px;
+    height: 200px;
+    top: 20px;
+    left: 40%;
+    float: left;
+    position: relative;
+    background-image: $backgroundImageForTables;
+}
+
+.SearchInput {
+    height: 50px;
+    font: bold 50px;
+}
+
+#Logo {
+    top: 20px;
+    padding-top: 5px;
+}
+
+#spnCart {
+    margin-left: 2px;
+}
+
+form[novalidate] input {
+    border-left-width: 8px;
+    border-color: blue;
+    border-style: solid;
+}
+
+form input[required] .ng-pristine {
+    border-color: red;
+    font: red;
+}
+
+input .ng-valid .ng-dirty {
+    border-color: green;
+}
+
+.btnStyle {
+    background-color: yellow;
+}
+
+.SearchInput {
+    background-color: $primaryColor;
+    height: 45px;
+    font: 40px;
+}
+
+.btnStyle_Cart {
+    background-color: $primaryColor;
+    width: 240px;
+    background-image: url('../Images/ShoppingCart-CartButtonIcon1.png');
+    background-repeat: no-repeat;
+    height: 50px;
+    font: bold 200px;
+    stroke: ActiveCaption;
+    text-decoration: solid;
+    text-decoration-color: aqua;
+}
